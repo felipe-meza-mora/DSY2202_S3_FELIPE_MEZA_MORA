@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carrito de Compras Comercializadora DyF</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo" width="60" height="60"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item" id="perfil-link" style="display: none;">
+                            <a class="nav-link" href="perfil.html"></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-5 perfil">
+        <h1 class="text-center">Perfil de Usuario</h1>
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center">Datos Personales</h2>
+                <p><strong><label for="nombreUsuario">Nombre:</label></strong> <span id="nombreUsuario" class="text-center"></span></p>
+                <p><strong><label for="correoUsuario">Correo:</label></strong> <span id="correoUsuario" class="text-center"></span></p>
+                <p><strong><label for="direccionUsuario">Dirección:</label></strong> <span id="direccionUsuario" class="text-center"></span></p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center">Cambiar Contraseña</h2>
+                <form id="cambiarContraseñaForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="contraseñaAnterior" class="form-label">Contraseña Anterior:</label>
+                        <input type="password" class="form-control" id="contraseñaAnterior" required>
+                        <div class="invalid-feedback">La contraseña anterior es requerida.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nuevaContraseña" class="form-label">Nueva Contraseña:</label>
+                        <input type="password" class="form-control" id="nuevaContraseña" required>
+                        <div class="invalid-feedback">La nueva contraseña debe tener al menos 6 caracteres y contener al menos un número, una letra mayúscula y uno de los siguientes caracteres especiales: - _ ! @ # $ % ^ & *</div>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Cambiar Contraseña</button>
+                    <hr>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/perfil_app.js"></script>
+</body>
+</html>

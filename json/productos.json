@@ -1,0 +1,74 @@
+[
+    {
+        "precio": 5690,
+        "id": 1,
+        "categoria":"papas fritas",
+        "marca": "McCain",
+        "title": "Papa Smile McCain 1,5 kg",
+        "thumbnailUrl": "./img/smile.png"
+    },
+    {
+        "precio": 5990,
+        "id": 2,
+        "categoria":"papas fritas",
+        "marca": "McCain",
+        "title": "Papas fritas 12x12 onefry  2,5 kg",
+        "thumbnailUrl": "./img/12x12.png"
+    },
+    {
+        "precio": 6990,
+        "id": 3,
+        "categoria":"papas fritas",
+        "marca": "McCain",
+        "title": "Papas Fritas Mccain 6x6 mm 2,5kg",
+        "thumbnailUrl": "./img/6x6.png"
+    },
+    {
+        "precio": 7990,
+        "id": 4,
+        "categoria":"papas fritas",
+        "marca": "McCain",
+        "title": "Papa Crinkle Mccain 2.5kg",
+        "thumbnailUrl": "./img/crinkle.png"
+    },
+    {
+        "precio":17990 ,
+        "id": 5,
+        "categoria":"Aceites",
+        "marca": "Maxi Frits",
+        "title": "Aceite Maxi Frits 20 Lts",
+        "thumbnailUrl": "./img/frits.png"
+    },
+    {
+        "precio":12990 ,
+        "id": 6,
+        "categoria":"Aceites",
+        "marca": "Maxi Frits",
+        "title": "Aceite Maxi Frits 5 Lts",
+        "thumbnailUrl": "./img/frits5.png"
+    },
+    {
+        "precio":15990 ,
+        "id": 7,
+        "categoria":"Pollo",
+        "marca": "Sadia",
+        "title": "Nuggets Sadia 2 kg",
+        "thumbnailUrl": "./img/nuggets.png"
+    },
+    {
+        "precio":12990 ,
+        "id": 8,
+        "categoria":"Pollo",
+        "marca": "Sadia",
+        "title": "Alitas Chicken Wings Sadia 2 kg",
+        "thumbnailUrl": "./img/alitas.png"
+    },
+    {
+        "precio":15990,
+        "id": 9,
+        "categoria":"Aros de Cebolla",
+        "marca": "McCain",
+        "title": "Aros de Cebolla McCain 1,5 kg",
+        "thumbnailUrl": "./img/aros.png"
+    }
+]
