@@ -12,18 +12,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isValidEmail(correo)) {
             correoInput.classList.add('is-invalid');
             return;
+        } else {
+            correoInput.classList.remove('is-invalid');
         }
 
         // Obtener datos del localStorage
-        const usuarioGuardado = JSON.parse(localStorage.getItem('usuario'));
+        const usuariosGuardados = JSON.parse(localStorage.getItem('usuarios')) || [];
 
         // Verificar si el correo coincide con los datos almacenados
-        if (usuarioGuardado && usuarioGuardado.correo === correo) {
+        const usuario = usuariosGuardados.find(user => user.correo === correo);
+        
+        if (usuario) {
             // Mostrar mensaje con la contraseña
-            mensajeRecuperacion.textContent = `Tu contraseña es: ${usuarioGuardado.password}`;
+            mensajeRecuperacion.textContent = `Tu contraseña es: ${usuario.password}`;
             mensajeRecuperacion.style.display = 'block';
         } else {
             // Mostrar mensaje de error para correo incorrecto
+            mensajeRecuperacion.textContent = 'Correo no encontrado.';
+            mensajeRecuperacion.style.display = 'block';
             correoInput.classList.add('is-invalid');
         }
     });
