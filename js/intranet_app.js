@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // URL del archivo JSON (puede ser una URL absoluta o relativa)
-    const url = './json/productos.json'; // Reemplaza con la ruta correcta de tu archivo JSON
+    // URL del archivo JSON
+    const url = './json/productos.json';
 
     // Obtener referencia a la tabla
     const tableBody = document.getElementById('productos-table').querySelector('tbody');
