@@ -64,6 +64,33 @@ document.addEventListener('DOMContentLoaded', () => {
         return isValid;
     };
 
+    const obtenerUsuarios = () => {
+        const usuariosJSON = localStorage.getItem('usuarios');
+        return usuariosJSON ? JSON.parse(usuariosJSON) : [];
+    };
+
+    const guardarUsuarios = (usuarios) => {
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    };
+
+    const agregarUsuario = (nuevoUsuario) => {
+        const usuarios = obtenerUsuarios();
+        usuarios.push(nuevoUsuario);
+        guardarUsuarios(usuarios);
+    };
+
+    // Agregar un usuario inicial por código (si no existe aún)
+    if (!localStorage.getItem('usuarios')) {
+        const usuarioInicial = {
+            nombre: 'Admin',
+            correo: 'admin@dyf.cl',
+            password: 'Qwerty_123',
+            direccion: 'Av. Siempre Viva 123',
+            permisos: 'admin'
+        };
+        agregarUsuario(usuarioInicial);
+    }
+
     registroForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -72,15 +99,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const correo = document.getElementById('correo').value;
             const password = document.getElementById('password').value;
             const direccion = document.getElementById('direccion').value;
+            const permisos = 'cliente';
 
-            const usuario = {
+            const nuevoUsuario = {
                 nombre,
                 correo,
                 password,
-                direccion
+                direccion,
+                permisos
             };
 
-            localStorage.setItem('usuario', JSON.stringify(usuario));
+            agregarUsuario(nuevoUsuario);
 
             document.getElementById('registro-exitoso').style.display = 'block';
             registroForm.reset();
